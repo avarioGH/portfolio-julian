@@ -167,7 +167,7 @@ export const FeaturedWork: React.FC = () => {
               </div>
 
               {/* Modal Body */}
-              <div className="p-6 sm:p-8 overflow-y-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+              <div className="p-6 sm:p-8 overflow-y-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
                 
                 {/* Video Player */}
                 <div className="md:col-span-5 flex justify-center">
@@ -193,94 +193,71 @@ export const FeaturedWork: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Case Study Details */}
-                <div className="md:col-span-7 flex flex-col gap-6">
-                  <div>
-                    <span className="text-[10px] tracking-[0.25em] uppercase text-[#A99582] font-semibold block mb-1">
-                      PROJECT TITLE
-                    </span>
-                    <h3 className="font-serif text-2xl sm:text-3xl font-normal text-[#111111] leading-tight">
-                      {selectedModalProject.title}
-                    </h3>
-                    <p className="mt-3 text-xs sm:text-sm text-[#77716B] leading-relaxed">
-                      {selectedModalProject.description}
-                    </p>
-                  </div>
-
-                  {selectedModalProject.objective && (
-                    <div className="p-4 bg-white border border-[#D7C8B7]/60">
-                      <div className="text-[9px] tracking-[0.2em] uppercase font-bold text-[#A99582] mb-1">
-                        CAMPAIGN OBJECTIVE
-                      </div>
-                      <p className="text-xs text-[#252321] leading-relaxed">
-                        {selectedModalProject.objective}
-                      </p>
-                    </div>
-                  )}
-
+                {/* Case Study Details - Metrics Only */}
+                <div className="md:col-span-7 flex flex-col justify-center gap-6">
                   {/* Performance Plate */}
                   <div>
-                    <div className="text-[9px] tracking-[0.2em] uppercase font-bold text-[#77716B] mb-2">
+                    <div className="text-[10px] tracking-[0.25em] uppercase font-bold text-[#A99582] mb-3">
                       CAMPAIGN METRICS
                     </div>
                     {selectedModalProject.metrics ? (
-                      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 text-center">
+                      <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 text-center">
                         {selectedModalProject.metrics.views && (
-                          <div className="p-3 bg-white border border-[#D7C8B7]/60">
-                            <span className="font-serif text-lg sm:text-xl font-normal text-[#111111] block">
+                          <div className="p-4 bg-white border border-[#D7C8B7]/60">
+                            <span className="font-serif text-xl sm:text-2xl font-normal text-[#111111] block">
                               {selectedModalProject.metrics.views}
                             </span>
-                            <span className="text-[8px] tracking-[0.16em] uppercase text-[#77716B]">
+                            <span className="text-[9px] tracking-[0.18em] uppercase text-[#77716B]">
                               VIEWS
                             </span>
                           </div>
                         )}
                         {selectedModalProject.metrics.likes && (
-                          <div className="p-3 bg-white border border-[#D7C8B7]/60">
-                            <span className="font-serif text-lg sm:text-xl font-normal text-[#111111] block">
+                          <div className="p-4 bg-white border border-[#D7C8B7]/60">
+                            <span className="font-serif text-xl sm:text-2xl font-normal text-[#111111] block">
                               {selectedModalProject.metrics.likes}
                             </span>
-                            <span className="text-[8px] tracking-[0.16em] uppercase text-[#77716B]">
+                            <span className="text-[9px] tracking-[0.18em] uppercase text-[#77716B]">
                               LIKES
                             </span>
                           </div>
                         )}
                         {selectedModalProject.metrics.comments && (
-                          <div className="p-3 bg-white border border-[#D7C8B7]/60">
-                            <span className="font-serif text-lg sm:text-xl font-normal text-[#111111] block">
+                          <div className="p-4 bg-white border border-[#D7C8B7]/60">
+                            <span className="font-serif text-xl sm:text-2xl font-normal text-[#111111] block">
                               {selectedModalProject.metrics.comments}
                             </span>
-                            <span className="text-[8px] tracking-[0.16em] uppercase text-[#77716B]">
+                            <span className="text-[9px] tracking-[0.18em] uppercase text-[#77716B]">
                               COMMENTS
                             </span>
                           </div>
                         )}
                         {selectedModalProject.metrics.saves && (
-                          <div className="p-3 bg-white border border-[#D7C8B7]/60">
-                            <span className="font-serif text-lg sm:text-xl font-normal text-[#111111] block">
+                          <div className="p-4 bg-white border border-[#D7C8B7]/60">
+                            <span className="font-serif text-xl sm:text-2xl font-normal text-[#111111] block">
                               {selectedModalProject.metrics.saves}
                             </span>
-                            <span className="text-[8px] tracking-[0.16em] uppercase text-[#77716B]">
+                            <span className="text-[9px] tracking-[0.18em] uppercase text-[#77716B]">
                               SAVES
                             </span>
                           </div>
                         )}
                         {selectedModalProject.metrics.reposts && (
-                          <div className="p-3 bg-white border border-[#D7C8B7]/60">
-                            <span className="font-serif text-lg sm:text-xl font-normal text-[#111111] block">
+                          <div className="p-4 bg-white border border-[#D7C8B7]/60">
+                            <span className="font-serif text-xl sm:text-2xl font-normal text-[#111111] block">
                               {selectedModalProject.metrics.reposts}
                             </span>
-                            <span className="text-[8px] tracking-[0.16em] uppercase text-[#77716B]">
+                            <span className="text-[9px] tracking-[0.18em] uppercase text-[#77716B]">
                               REPOSTS
                             </span>
                           </div>
                         )}
                         {selectedModalProject.metrics.shares && (
-                          <div className="p-3 bg-white border border-[#D7C8B7]/60">
-                            <span className="font-serif text-lg sm:text-xl font-normal text-[#111111] block">
+                          <div className="p-4 bg-white border border-[#D7C8B7]/60">
+                            <span className="font-serif text-xl sm:text-2xl font-normal text-[#111111] block">
                               {selectedModalProject.metrics.shares}
                             </span>
-                            <span className="text-[8px] tracking-[0.16em] uppercase text-[#77716B]">
+                            <span className="text-[9px] tracking-[0.18em] uppercase text-[#77716B]">
                               SHARES
                             </span>
                           </div>
@@ -294,7 +271,7 @@ export const FeaturedWork: React.FC = () => {
                     <a
                       href="#contact"
                       onClick={() => setSelectedModalProject(null)}
-                      className="inline-flex items-center gap-2 px-6 py-3 bg-[#111111] text-[#F5F1EA] text-xs tracking-[0.2em] uppercase font-semibold hover:bg-[#252321] transition-colors"
+                      className="inline-flex items-center gap-2 px-6 py-3.5 bg-[#111111] text-[#F5F1EA] text-xs tracking-[0.2em] uppercase font-semibold hover:bg-[#252321] transition-colors"
                     >
                       <span>INQUIRE SIMILAR PRODUCTION</span>
                       <ArrowUpRight className="w-3.5 h-3.5" />
