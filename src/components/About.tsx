@@ -54,25 +54,26 @@ export const About: React.FC = () => {
                 </div>
               </div>
 
-              {/* Overlapping Small Lifestyle Cutout (Red Tee) */}
+              {/* Overlapping Small Proof / Metric Cutout (result1.png) */}
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.7, delay: 0.2 }}
-                className="absolute -bottom-8 -right-4 sm:-right-8 w-36 sm:w-44 p-2 bg-[#F5F1EA] border border-[#252321]/20 shadow-2xl z-20"
+                className="absolute -bottom-8 -right-4 sm:-right-8 w-40 sm:w-48 p-2.5 bg-[#F5F1EA] border border-[#252321]/20 shadow-2xl z-20"
               >
-                <div className="relative aspect-[4/3] overflow-hidden">
+                <div className="relative aspect-[3/4] overflow-hidden bg-black/5">
                   <Image
-                    src="/assets/profile/about-01.jpg"
-                    alt="Julian in action"
+                    src="/img/screenshot/result1.png"
+                    alt="Julian Sumali Performance & Results"
                     fill
-                    className="object-cover"
-                    sizes="180px"
+                    unoptimized
+                    className="object-cover object-top"
+                    sizes="200px"
                   />
                 </div>
-                <div className="mt-1 text-center text-[8px] tracking-[0.2em] uppercase text-[#77716B]">
-                  IN PRODUCTION
+                <div className="mt-1.5 text-center text-[8px] tracking-[0.2em] uppercase font-semibold text-[#77716B]">
+                  VERIFIED RESULTS
                 </div>
               </motion.div>
 
