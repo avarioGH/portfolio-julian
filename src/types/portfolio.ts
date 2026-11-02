@@ -3,8 +3,8 @@ export interface ProjectVideo {
   title: string;
   brand: string;
   views: string;
-  category: 'AI & Technology' | 'Product Review' | 'Educational Content' | 'Lifestyle' | 'Brand Campaign';
-  platform: 'TikTok' | 'Instagram' | 'Reels' | 'YouTube Shorts';
+  category: string;
+  platform: 'TikTok' | 'Instagram' | 'Facebook' | 'Reels' | 'YouTube Shorts';
   thumbnail: string;
   videoUrl?: string;
   objective?: string;
@@ -15,6 +15,7 @@ export interface ProjectVideo {
     comments?: string;
     saves?: string;
     shares?: string;
+    reposts?: string;
     engagementRate?: string;
   };
   keyTakeaway?: string;
