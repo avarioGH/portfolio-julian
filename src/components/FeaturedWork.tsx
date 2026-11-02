@@ -8,25 +8,14 @@ import { PROJECTS_DATA } from '@/data/portfolio';
 import { ProjectVideo } from '@/types/portfolio';
 
 const CATEGORIES = [
-  'All Work',
-  'AI & Technology',
-  'Product Reviews',
-  'Educational Content',
-  'Lifestyle',
-  'Brand Collaborations',
+  'All',
 ] as const;
 
 export const FeaturedWork: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState<string>('All Work');
+  const [activeCategory, setActiveCategory] = useState<string>('All');
   const [selectedModalProject, setSelectedModalProject] = useState<ProjectVideo | null>(null);
 
-  const filteredProjects = activeCategory === 'All Work'
-    ? PROJECTS_DATA
-    : PROJECTS_DATA.filter((p) => {
-        if (activeCategory === 'Product Reviews') return p.category === 'Product Review';
-        if (activeCategory === 'Brand Collaborations') return p.category === 'Brand Campaign';
-        return p.category === activeCategory;
-      });
+  const filteredProjects = PROJECTS_DATA;
 
   return (
     <section id="work" className="py-24 sm:py-32 bg-[#F5F1EA] border-b border-[#252321]/8">
