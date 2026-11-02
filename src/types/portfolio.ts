@@ -13,6 +13,7 @@ export interface ProjectVideo {
     views?: string;
     likes?: string;
     comments?: string;
+    saves?: string;
     shares?: string;
     engagementRate?: string;
   };

@@ -234,34 +234,79 @@ export const FeaturedWork: React.FC = () => {
                     <div className="text-[9px] tracking-[0.2em] uppercase font-bold text-[#77716B] mb-2">
                       CAMPAIGN METRICS
                     </div>
-                    <div className="grid grid-cols-3 gap-3 text-center">
-                      <div className="p-3 bg-white border border-[#D7C8B7]/60">
-                        <span className="font-serif text-xl font-normal text-[#111111] block">
-                          {selectedModalProject.metrics?.views || selectedModalProject.views}
-                        </span>
-                        <span className="text-[8px] tracking-[0.18em] uppercase text-[#77716B]">
-                          TOTAL VIEWS
-                        </span>
+                    {selectedModalProject.metrics?.saves || selectedModalProject.metrics?.shares ? (
+                      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 text-center">
+                        <div className="p-3 bg-white border border-[#D7C8B7]/60">
+                          <span className="font-serif text-lg sm:text-xl font-normal text-[#111111] block">
+                            {selectedModalProject.metrics.views}
+                          </span>
+                          <span className="text-[8px] tracking-[0.16em] uppercase text-[#77716B]">
+                            VIEWS
+                          </span>
+                        </div>
+                        <div className="p-3 bg-white border border-[#D7C8B7]/60">
+                          <span className="font-serif text-lg sm:text-xl font-normal text-[#111111] block">
+                            {selectedModalProject.metrics.likes}
+                          </span>
+                          <span className="text-[8px] tracking-[0.16em] uppercase text-[#77716B]">
+                            LIKES
+                          </span>
+                        </div>
+                        <div className="p-3 bg-white border border-[#D7C8B7]/60">
+                          <span className="font-serif text-lg sm:text-xl font-normal text-[#111111] block">
+                            {selectedModalProject.metrics.comments || '—'}
+                          </span>
+                          <span className="text-[8px] tracking-[0.16em] uppercase text-[#77716B]">
+                            COMMENTS
+                          </span>
+                        </div>
+                        <div className="p-3 bg-white border border-[#D7C8B7]/60">
+                          <span className="font-serif text-lg sm:text-xl font-normal text-[#111111] block">
+                            {selectedModalProject.metrics.saves || '—'}
+                          </span>
+                          <span className="text-[8px] tracking-[0.16em] uppercase text-[#77716B]">
+                            SAVES
+                          </span>
+                        </div>
+                        <div className="p-3 bg-white border border-[#D7C8B7]/60 col-span-2 sm:col-span-1">
+                          <span className="font-serif text-lg sm:text-xl font-normal text-[#111111] block">
+                            {selectedModalProject.metrics.shares || '—'}
+                          </span>
+                          <span className="text-[8px] tracking-[0.16em] uppercase text-[#77716B]">
+                            SHARES
+                          </span>
+                        </div>
                       </div>
+                    ) : (
+                      <div className="grid grid-cols-3 gap-3 text-center">
+                        <div className="p-3 bg-white border border-[#D7C8B7]/60">
+                          <span className="font-serif text-xl font-normal text-[#111111] block">
+                            {selectedModalProject.metrics?.views || selectedModalProject.views}
+                          </span>
+                          <span className="text-[8px] tracking-[0.18em] uppercase text-[#77716B]">
+                            TOTAL VIEWS
+                          </span>
+                        </div>
 
-                      <div className="p-3 bg-white border border-[#D7C8B7]/60">
-                        <span className="font-serif text-xl font-normal text-[#111111] block">
-                          {selectedModalProject.metrics?.likes || '100K+'}
-                        </span>
-                        <span className="text-[8px] tracking-[0.18em] uppercase text-[#77716B]">
-                          LIKES &amp; SAVES
-                        </span>
-                      </div>
+                        <div className="p-3 bg-white border border-[#D7C8B7]/60">
+                          <span className="font-serif text-xl font-normal text-[#111111] block">
+                            {selectedModalProject.metrics?.likes || '100K+'}
+                          </span>
+                          <span className="text-[8px] tracking-[0.18em] uppercase text-[#77716B]">
+                            LIKES
+                          </span>
+                        </div>
 
-                      <div className="p-3 bg-white border border-[#D7C8B7]/60">
-                        <span className="font-serif text-xl font-normal text-[#111111] block">
-                          {selectedModalProject.metrics?.engagementRate || '8.5%'}
-                        </span>
-                        <span className="text-[8px] tracking-[0.18em] uppercase text-[#77716B]">
-                          ENGAGEMENT
-                        </span>
+                        <div className="p-3 bg-white border border-[#D7C8B7]/60">
+                          <span className="font-serif text-xl font-normal text-[#111111] block">
+                            {selectedModalProject.metrics?.engagementRate || '8.5%'}
+                          </span>
+                          <span className="text-[8px] tracking-[0.18em] uppercase text-[#77716B]">
+                            ENGAGEMENT
+                          </span>
+                        </div>
                       </div>
-                    </div>
+                    )}
                   </div>
 
                   {/* CTA */}
