@@ -171,7 +171,7 @@ export const FeaturedWork: React.FC = () => {
                 
                 {/* Video Player */}
                 <div className="md:col-span-5 flex justify-center">
-                  <div className="relative aspect-[9/16] w-full max-w-[280px] overflow-hidden bg-black border border-[#252321]/30 shadow-lg">
+                  <div className="relative aspect-[9/16] w-full max-w-[280px] overflow-hidden bg-black border border-[#252321]/30 shadow-lg group">
                     {selectedModalProject.videoUrl ? (
                       <video
                         src={selectedModalProject.videoUrl}
@@ -183,12 +183,29 @@ export const FeaturedWork: React.FC = () => {
                         className="w-full h-full object-cover"
                       />
                     ) : (
-                      <Image
-                        src={selectedModalProject.thumbnail}
-                        alt={selectedModalProject.title}
-                        fill
-                        className="object-cover"
-                      />
+                      <div className="relative w-full h-full">
+                        <Image
+                          src={selectedModalProject.thumbnail}
+                          alt={selectedModalProject.title}
+                          fill
+                          className="object-cover"
+                        />
+                        {selectedModalProject.externalUrl && (
+                          <a
+                            href={selectedModalProject.externalUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center gap-3 p-4 text-center text-white hover:bg-black/60 transition-colors"
+                          >
+                            <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/40">
+                              <Play className="w-5 h-5 fill-white text-white ml-0.5" />
+                            </div>
+                            <span className="text-xs uppercase tracking-[0.2em] font-semibold text-[#F5F1EA]">
+                              Watch on Instagram
+                            </span>
+                          </a>
+                        )}
+                      </div>
                     )}
                   </div>
                 </div>

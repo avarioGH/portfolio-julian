@@ -7,6 +7,7 @@ export interface ProjectVideo {
   platform: 'TikTok' | 'Instagram' | 'Facebook' | 'Reels' | 'YouTube Shorts';
   thumbnail: string;
   videoUrl?: string;
+  externalUrl?: string;
   objective?: string;
   description?: string;
   metrics?: {
