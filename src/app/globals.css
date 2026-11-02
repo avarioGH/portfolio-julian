@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+:root {
+  --ivory: #F5F1EA;
+  --cream: #EDE6DC;
+  --white: #FFFFFF;
+  --beige: #D7C8B7;
+  --taupe: #A99582;
+  --charcoal: #252321;
+  --black: #111111;
+  --muted-gray: #77716B;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--ivory);
+  color: var(--charcoal);
+}
+
+body {
+  background-color: var(--ivory);
+  color: var(--charcoal);
+  font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Elegant Editorial Serif Typography Utility */
+.font-serif {
+  font-family: var(--font-editorial-serif), Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+/* Subtle luxury paper / editorial grain overlay */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('/assets/backgrounds/noise.svg');
+  background-repeat: repeat;
+  opacity: 0.18;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+::selection {
+  background: var(--charcoal);
+  color: var(--ivory);
+}
+
+/* Editorial Linework & Borders */
+.border-editorial {
+  border-color: rgba(37, 35, 33, 0.12);
+}
+
+.border-editorial-dark {
+  border-color: rgba(245, 241, 234, 0.14);
+}
+
+/* Editorial Glass & Surface styles */
+.editorial-nav-blur {
+  background: rgba(245, 241, 234, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(37, 35, 33, 0.08);
+}
+
+.editorial-card-ivory {
+  background: var(--white);
+  border: 1px solid rgba(215, 200, 183, 0.45);
+  box-shadow: 0 4px 20px -4px rgba(37, 35, 33, 0.03);
+}
+
+.editorial-card-cream {
+  background: var(--cream);
+  border: 1px solid rgba(169, 149, 130, 0.25);
+}
+
+/* Thin editorial dividers */
+.editorial-line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(37, 35, 33, 0.15), transparent);
+}
+
+/* Custom minimal scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--ivory);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--beige);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--taupe);
+}
+
+/* Focus styles */
+a:focus-visible, button:focus-visible {
+  outline: 1.5px solid var(--charcoal);
+  outline-offset: 2px;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
