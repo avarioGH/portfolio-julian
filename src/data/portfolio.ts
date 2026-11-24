@@ -13,7 +13,7 @@ export const CREATOR_PROFILE = {
   email: 'juliansumali7@gmail.com',
   whatsapp: '+6285244067895',
   whatsappUrl: 'https://wa.me/6285244067895',
-  instagram: 'https://instagram.com/julianmodebelajar',
+  instagram: 'https://www.instagram.com/julianmodebelajar?avpt=cHpnOHZkbTF5MzEw&utm_source=qr',
   tiktok: 'https://tiktok.com/@juliansumali',
   metrics: [
     { label: 'Views Generated', value: '20M+' },
@@ -207,7 +207,7 @@ export const PROJECTS_DATA: ProjectVideo[] = [
     id: 'proj-8',
     title: 'Atlas Capture Monetization Case Study',
     brand: 'Atlas Capture (@julianincome)',
-    views: '682K',
+    views: '800K',
     category: 'Creator Economy',
     platform: 'Instagram',
     thumbnail: '/assets/videos/thumbnails/img_5062.jpg',
@@ -215,7 +215,7 @@ export const PROJECTS_DATA: ProjectVideo[] = [
     objective: 'Spark massive viral discussion and community conversation around creator income and workflow systems.',
     description: 'Viral Instagram breakdown showing authentic monetization numbers, resulting in over 10,000 comments and viral reach.',
     metrics: {
-      views: '682,000',
+      views: '800,000',
       likes: '17,200',
       comments: '10,100',
       reposts: '1,051',
